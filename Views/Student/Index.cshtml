@@ -1,0 +1,92 @@
+﻿@model IEnumerable<FRB_Projects.Models.Student>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Student Detail</h2>
+<div>
+    <!-- Button trigger modal -->
+    <button type="button" onclick="getForm()" class="btn btn-primary" data-toggle="modal" data-target="#AddStudent">
+        Add Student
+    </button>
+
+</div>
+<div class="row">
+    <div class="col-md-8">
+        <!-- Modal -->
+        <div class="modal fade" id="AddStudent" tabindex="-1" role="dialog" aria-labelledby="StudentModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="StudentModalLabel">Add Student</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body" id="_student">
+
+                        <div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal" id="savebtn">Save </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<table class="table" id="tbllist">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.StuId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FatherName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Age)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Standard)
+            </th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody id="tbldata">
+
+        @*@foreach (var item in Model) {
+            <tr>
+            <td>
+            @Html.DisplayFor(modelItem => item.StuId)
+            </td>
+            <td>
+            @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+            @Html.DisplayFor(modelItem => item.FatherName)
+            </td>
+            <td>
+            @Html.DisplayFor(modelItem => item.Age)
+            </td>
+            <td>
+            @Html.DisplayFor(modelItem => item.Standard)
+            </td>
+            <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>
+            </tr>}*@
+    </tbody>
+</table>
+
+

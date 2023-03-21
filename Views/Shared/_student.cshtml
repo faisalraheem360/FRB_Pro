@@ -1,0 +1,43 @@
+﻿@model FRB_Projects.Models.Student
+
+
+<form method="post">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    @*<div class="form-group">
+
+        
+        <label asp-for="StuId" class="control-label" ></label>
+        <span asp-validation-for="StuId" class="text-danger" ></span>
+        </div>*@
+         @*<label asp-for="StuId" class="control-label" ></label>*@
+        <input asp-for="StuId" class="form-control" id="stuId" type="hidden"/>
+      @*  <span asp-validation-for="StuId" class="text-danger" ></span>*@
+    <div class="form-group">
+        <label asp-for="Name" class="control-label"></label>
+        <input asp-for="Name" class="form-control" id="name" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="FatherName" class="control-label"></label>
+        <input asp-for="FatherName" class="form-control" id="fname" />
+        <span asp-validation-for="FatherName" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Age" class="control-label"></label>
+        <input asp-for="Age" class="form-control" id="age" />
+        <span asp-validation-for="Age" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Standard" class="control-label"></label>
+        <input asp-for="Standard" class="form-control"id="standard" />
+        <span asp-validation-for="Standard" class="text-danger"></span>
+    </div>
+        <div class="form-group">
+        <label asp-for="UploadPic" class="control-label"></label>
+        <input asp-for="UploadPic" class="form-control"id="uploadpic" />
+        <span asp-validation-for="UploadPic" class="text-danger"></span>
+          <input asp-for="ImageUrl" class="form-control" id="imageurl" type="hidden"/>
+    </div>
+
+</form>
+
